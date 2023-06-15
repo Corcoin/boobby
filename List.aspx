@@ -1,9 +1,46 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="List.aspx.cs" Inherits="WebApplication7.List" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="List.aspx.cs" Inherits="WebApplication7.List" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <style>
+    /* CSS for the GridView on the Leaders section */
+    #form1 #gvLeaders {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    /* CSS for header row */
+    #form1 #gvLeaders th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        padding: 8px;
+        text-align: left;
+    }
+
+    /* CSS for data rows */
+    #form1 #gvLeaders td {
+        padding: 8px;
+    }
+
+    /* CSS for alternating data rows */
+    #form1 #gvLeaders tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    /* CSS for selected row */
+    #form1 #gvLeaders tr.selected {
+        background-color: #cce6ff;
+    }
+
+    /* CSS for hover effect */
+    #form1 #gvLeaders tr:hover {
+        background-color: #f5f5f5;
+        cursor: pointer;
+    }
+</style>
+
     <title></title>
 </head>
 <body>
