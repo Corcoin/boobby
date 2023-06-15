@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CostCenterPage.aspx.cs" Inherits="WebApplication7.CostCenterPage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CostCenterPage.aspx.cs" Inherits="WebApplication7.CostCenterPage" %>
 
 <!DOCTYPE html>
 
@@ -12,14 +12,27 @@
             <h2>Cost Center Page</h2>
             <h3><asp:Literal runat="server" ID="lblMessage" /></h3>
            
-   <asp:GridView ID="gvUsers" runat="server" AutoGenerateColumns="false" OnRowDataBound="gvUsers_RowDataBound">
+   <asp:GridView ID="gvUsers" runat="server" OnRowDataBound="gvUsers_RowDataBound">
     <Columns>
-        <asp:BoundField DataField="costcenterName" HeaderText="Cost Center" />
-        <asp:BoundField DataField="pa1" HeaderText="PA1" />
-        <asp:BoundField DataField="pa2" HeaderText="PA2" />
-        <asp:BoundField DataField="pa3" HeaderText="PA3" />
+       
+        <asp:TemplateField HeaderText="PA1">
+            <ItemTemplate>
+                <asp:Label ID="lblPA1" runat="server"></asp:Label>
+            </ItemTemplate>
+        </asp:TemplateField>
+        <asp:TemplateField HeaderText="PA2">
+            <ItemTemplate>
+                <asp:Label ID="lblPA2" runat="server"></asp:Label>
+            </ItemTemplate>
+        </asp:TemplateField>
+        <asp:TemplateField HeaderText="PA3">
+            <ItemTemplate>
+                <asp:Label ID="lblPA3" runat="server"></asp:Label>
+            </ItemTemplate>
+        </asp:TemplateField>
     </Columns>
 </asp:GridView>
+
 
 
 
