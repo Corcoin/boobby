@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI.WebControls;
@@ -33,7 +33,6 @@ namespace WebApplication7
             }
         }
 
-
         private DataTable GetUsersByCostCenter(string costCenter)
         {
             DataTable users = new DataTable();
@@ -56,6 +55,7 @@ namespace WebApplication7
 
             return users;
         }
+
         protected void gvUsers_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
@@ -64,22 +64,31 @@ namespace WebApplication7
                 DataRowView rowView = e.Row.DataItem as DataRowView;
                 if (rowView != null)
                 {
-                    string costCenterName = rowView["costcenterName"].ToString();
                     string pa1 = rowView["pa1"].ToString();
                     string pa2 = rowView["pa2"].ToString();
                     string pa3 = rowView["pa3"].ToString();
 
                     // Perform actions based on the data values
-                    // For example, you can set the text of a label control in the row:
-                    Label lblCostCenter = e.Row.FindControl("lblCostCenter") as Label;
-                    if (lblCostCenter != null)
+                    // For example, you can set the text of label controls in the row:
+                    Label lblPA1 = e.Row.FindControl("lblPA1") as Label;
+                    if (lblPA1 != null)
                     {
-                        lblCostCenter.Text = costCenterName;
+                        lblPA1.Text = pa1;
+                    }
+
+                    Label lblPA2 = e.Row.FindControl("lblPA2") as Label;
+                    if (lblPA2 != null)
+                    {
+                        lblPA2.Text = pa2;
+                    }
+
+                    Label lblPA3 = e.Row.FindControl("lblPA3") as Label;
+                    if (lblPA3 != null)
+                    {
+                        lblPA3.Text = pa3;
                     }
                 }
             }
         }
-
-
     }
 }
