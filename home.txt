@@ -1,0 +1,32 @@
+-- Create the 'leaders' table
+CREATE TABLE leaders (
+    costcenter VARCHAR(50) PRIMARY KEY,
+    costcentername VARCHAR(100),
+    CCOrder INT,
+    parentarea VARCHAR(100),
+    pa3 VARCHAR(100),
+    pa2 VARCHAR(100),
+    pa1 VARCHAR(100)
+);
+
+-- Create the 'changes' table
+CREATE TABLE changes (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    costcenter VARCHAR(50),
+    changetype VARCHAR(50),
+    timestamp DATETIME
+);
+
+-- Insert sample data into the 'leaders' table
+INSERT INTO leaders (costcenter, costcentername, CCOrder, parentarea, pa3, pa2, pa1)
+VALUES
+    ('CC001', 'Cost Center 1', 1, 'Parent Area 1', 'Modified PA3-1', 'Modified PA2-1', 'Modified PA1-1'),
+    ('CC002', 'Cost Center 2', 2, 'Parent Area 2', 'Modified PA3-2', 'Modified PA2-2', 'Modified PA1-2'),
+    ('CC003', 'Cost Center 3', 3, 'Parent Area 3', 'Modified PA3-3', 'Modified PA2-3', 'Modified PA1-3'),
+    ('CC004', 'Cost Center 4', 4, 'Parent Area 4', 'Modified PA3-4', 'Modified PA2-4', 'Modified PA1-4'),
+    ('CC005', 'Cost Center 5', 5, 'Parent Area 5', 'Modified PA3-5', 'Modified PA2-5', 'Modified PA1-5'),
+    ('CC006', 'Cost Center 6', 6, 'Parent Area 6', 'Modified PA3-6', 'Modified PA2-6', 'Modified PA1-6'),
+    ('CC007', 'Cost Center 7', 7, 'Parent Area 7', 'Modified PA3-7', 'Modified PA2-7', 'Modified PA1-7'),
+    ('CC008', 'Cost Center 8', 8, 'Parent Area 8', 'Modified PA3-8', 'Modified PA2-8', 'Modified PA1-8'),
+    ('CC009', 'Cost Center 9', 9, 'Parent Area 9', 'Modified PA3-9', 'Modified PA2-9', 'Modified PA1-9'),
+    ('CC010', 'Cost Center 10', 10, 'Parent Area 10', 'Modified PA3-10', 'Modified PA2-10', 'Modified PA1-10');
