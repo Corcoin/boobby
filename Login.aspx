@@ -1,9 +1,58 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebApplication7.Login" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebApplication7.Login" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <style>
+    /* CSS for the Login Page */
+    #formLogin {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 300px;
+    }
+
+    #formLogin h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    #formLogin label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    #formLogin input[type="text"],
+    #formLogin input[type="password"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    #formLogin input[type="button"] {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    #formLogin input[type="button"]:hover {
+        background-color: #45a049;
+    }
+
+    #formLogin #lblErrorMessage {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+</style>
+
     <title></title>
 </head>
 <body>
